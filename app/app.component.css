@@ -1,0 +1,17 @@
+mat-form-field
+{
+    width:43%;
+    margin-left: 60px;
+}
+button{
+    margin-left: 670px;
+}
+.b1
+{
+    margin-left : 500px;
+}
+table,tr,td,th
+{
+    text-align: center;
+    font-size: larger;
+}

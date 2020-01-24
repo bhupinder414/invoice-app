@@ -1,0 +1,72 @@
+<mat-card>
+  <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+    <mat-label>Item 1</mat-label>
+    <input matInput required type="text" [(ngModel)]="item1">
+  </mat-form-field>
+
+  <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+    <mat-label>Price</mat-label>
+    <input matInput required type="text" [(ngModel)]="price1">
+  </mat-form-field>
+
+  <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+    <mat-label>Item 2</mat-label>
+    <input matInput required type="text" [(ngModel)]="item2">
+  </mat-form-field>
+
+  <mat-form-field floatLabel="auto" appearance="fill" color="accent" hideRequiredMarker>
+    <mat-label>Price</mat-label>
+    <input matInput required type="text" [(ngModel)]="price2">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" (click)="onClick()">Generate Invoice</button><br><br><br>
+
+  <div *ngFor="let t of total">
+  <div class="container">
+    <table class="table table-striped">
+      <tr>
+        <th class="text-warning">Items</th>
+        <th class="text-warning">Price</th>
+      </tr>
+       <tr>
+         <td>{{item1}}</td>
+         <td>{{price1}}</td>
+       </tr>
+       <tr>
+         <td>{{item2}}</td>
+         <td>{{price2}}</td>
+       </tr>
+       <tr>
+         <td class="text-success">Total</td>
+         <td class="text-success">{{total}}</td>
+       </tr>
+    </table><br>
+    <button class="b1" mat-raised-button color="primary" (click)="onGenerateInvoice()">CheckOut</button><br><br>
+
+    <div class="d1" *ngFor="let tt of totalWithTax">
+      <table class="table table-striped">
+        <tr>
+          <th class="text-warning">Items</th>
+          <th class="text-warning">Price</th>
+        </tr>
+         <tr>
+           <td>{{item1}}</td>
+           <td>{{price1}}</td>
+         </tr>
+         <tr>
+           <td>{{item2}}</td>
+           <td>{{price2}}</td>
+         </tr>
+         <tr>
+           <td class="text-secondary">Tax</td>
+           <td class="text-secondary">{{tax}}</td>
+         </tr>
+         <tr>
+           <td class="text-success">Total</td>
+           <td class="text-success">{{totalWithTax}}</td>
+         </tr>
+      </table>
+    </div>
+    </div>
+</div>
+  </mat-card>
